@@ -48,9 +48,7 @@ function fishBtnClicked() {
     // ALEX: Cod 10%, Salmon 10%, Tropical 30%, Puffer 50%
     let randNum = Math.random();
     if (randNum < 0.1) {
-      numCod++;
-      numCodSpan.innerHTML = numCod;
-      resultImg.src = 'img/Raw-Cod.png';
+      fishAll("numCod", "numCodSpan");
     } else if (randNum < 0.2) {
       numSalmon++;
       numSalmonSpan.innerHTML = numSalmon;
@@ -65,4 +63,10 @@ function fishBtnClicked() {
       resultImg.src = 'img/Pufferfish.png';
     }
   }
+}
+
+function fishAll(fishName,fishSpan,) {
+  fishName++;
+      fishSpan.innerHTML = fishName;
+      resultImg.src = `img/${fishName}.png`;
 }
