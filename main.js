@@ -14,15 +14,6 @@ let numCod = 0;
 let numSalmon = 0;
 let numTropical = 0;
 let numPuffer = 0;
-let codSteve = 0.7;
-let salSteve = 0.9;
-let tropSteve = 0.95;
-let codAlex = 0.1;
-let salAlex = 0.2;
-let tropAlex = 0.5;
-let codVill = 0.25;
-let salVill = 0.5;
-let tropVill = 0.75;
 
 
 // Add Event Listener to Calculate Button
@@ -36,13 +27,13 @@ function fishBtnClicked() {
   // Catch fish based on character
   if (character === "steve") {
     // STEVE: Cod 70%, Salmon 20%, Tropical 5%, Puffer 5%
-    catchFish(codSteve, salSteve, tropSteve);
+    catchFish(0.7, 0.9, 0.95);
   } else if (character === "alex") {
     // ALEX: Cod 10%, Salmon 10%, Tropical 30%, Puffer 50%
-    catchFish(codAlex, salAlex, tropAlex);
+    catchFish(0.1, 0.2, 0.5);
   } else if (character === "villager") { 
     // VILLAGER: Cod 25%, Salmon 25%, Tropical 25%, Puffer 25%
-    catchFish(codVill, salVill, tropVill);
+    catchFish(0.25, 0.5, 0.75);
   }
   
 }
